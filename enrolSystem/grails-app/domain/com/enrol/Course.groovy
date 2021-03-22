@@ -2,16 +2,16 @@ package com.enrol
 
 class Course {
 
-	String department=''
-	String courseTitle=''
-	String courseLeader=''
-	String courseCode=''
+	String department
+	String courseTitle
+	String courseLeader
+	String courseCode
 	Date startDate 
 	Date endDate 
-	String description=''
+	String description
 	int numberOfStudents
 	double tuitionFees	
-	String studyMode=''
+	String studyMode
 
     static constraints = {
 	department nullable:false, blank:false
