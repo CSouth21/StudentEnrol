@@ -3,7 +3,7 @@ package com.enrol
 class BootStrap {
 
     def init = { servletContext ->
-	def computing = new Course(
+	/*def computing = new Course(
 		department: 'Computing',
 		courseCode: 'CS123',
 		courseTitle: 'BSc Hon Computing',
@@ -11,6 +11,7 @@ class BootStrap {
 		startDate: new Date('09/09/2019'),
 		endDate: new Date('07/07/2023'),
 		numberOfStudents: 55,
+		//students: harrison,
 		studyMode: 'Fulltime',
 		tuitionFees: 9000.60,
 		description: '''Bombay Chadderboomtown''').save()
@@ -35,6 +36,7 @@ class BootStrap {
 		startDate: new Date('09/09/2019'),
 		endDate: new Date('07/07/2023'),
 		numberOfStudents: 30,
+		//students:bamford,
 		studyMode: 'Fulltime',
 		tuitionFees: 9000.60,
 		description: '''Marching on Together #LUFC''').save()
@@ -47,7 +49,7 @@ class BootStrap {
 		studentEmail: 'pbamford@gmail.com',
 		studentUsername: 'LordBamford420',
 		studentPassword: 'bielsaisgod',
-		course: 'Psychology').save()
+		course:psychology).save()
 
 	def harrison = new Student(
 		studentName: 'Jack Harrison',
@@ -57,13 +59,22 @@ class BootStrap {
 		studentEmail: 'jharrison@gmail.com',
 		studentUsername: 'JackLame',
 		studentPassword: 'bielsaislife',
-		course: 'Computing').save()
+		course:computing).save()
+
+	def dallas = new Student(
+		studentName: 'Stuart Dallas',
+		studentID: 'SD15',
+		dob: new Date('19/04/1991'),
+		isFundingAvailable: true,
+		studentEmail: 'sdallas@gmail.com',
+		studentUsername: 'CookstownCafu',
+		studentPassword: 'leedsborn',
+		course:business).save()
 
 	def sysArchs = new Module(
 		moduleTitle: 'System Architectures',
 		moduleCode: 'SA120',
 		credits: 20,
-		lecturer: 'Faiza Samreen',
 		course: 'Computing',
 		description: '''u wot m8''').save()
 
@@ -71,14 +82,21 @@ class BootStrap {
 		moduleTitle: 'Web Application Design and Implementation',
 		moduleCode: 'WADI120',
 		credits: 20,
-		lecturer: 'Jacky Stallard',
 		course: 'Computing',
 		description: '''big chungus''').save()
+
+	def daads = new Module(
+		moduleTitle: 'Database Administration and Data Sources',
+		moduleCode: 'DAADS120',
+		credits: 20,
+		course: 'Computing',
+		description: '''dudley''').save()
 
 	def faiza = new Lecturer(
 		fullName: 'Faiza Samreen',
 		post: 'Geoff',
 		subject: 'Computing',
+		//module: sysArchs,
 		lecturerEmail: 'faizasamreen@shu.co.uk',
 		office: 'Cantor',
 		bio: '''insert bio here''').save()
@@ -87,9 +105,19 @@ class BootStrap {
 		fullName: 'Jacky Stallard',
 		post: 'Geoff',
 		subject: 'Computing',
+		//module: wadi,
 		lecturerEmail: 'jackystallard@shu.co.uk',
 		office: 'Cantor',
 		bio: '''insert bio here v2''').save()
+
+	def laurie = new Lecturer(
+		fullName: 'Laurence Hirsch',
+		post: 'Geoff',
+		subject: 'Computing',
+		//module: daads,
+		lecturerEmail: 'laurencehirsch@shu.co.uk',
+		office: 'Cantor',
+		bio: '''insert bio here v3''').save() */
 
 
     }

@@ -9,7 +9,12 @@ class Student {
 	String studentEmail
 	String studentUsername
 	String studentPassword
-	String course
+	//String course
+	//Course courseEnrolled
+	
+	String toString(){
+	return studentID
+	}
 
     static constraints = {
 	studentName nullable:false, blank:false
@@ -19,6 +24,9 @@ class Student {
 	studentEmail nullable:false, blank:false, email:true
 	studentUsername nullable:false, blank:false, unique:true
 	studentPassword nullable:false, blank:false
-	course nullable:false, blank:false
+	//course nullable:false, blank:false
     }
+
+static hasMany = [modules:Module]
+static belongsTo = [course:Course]
 }

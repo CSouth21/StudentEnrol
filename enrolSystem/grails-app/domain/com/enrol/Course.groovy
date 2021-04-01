@@ -13,6 +13,10 @@ class Course {
 	double tuitionFees	
 	String studyMode
 
+	String toString(){
+	return courseTitle
+	}
+
     static constraints = {
 	department nullable:false, blank:false
 	courseTitle nullable:false, blank:false
@@ -26,5 +30,13 @@ class Course {
 	studyMode nullable:false, blank:false, size:1..20
 	
     }
+
+static hasMany = [students:Student, lecturers:Lecturer, modules:Module]
+//static hasMany = [lecturers:Lecturer]
+
+
+
+
+
 }
 

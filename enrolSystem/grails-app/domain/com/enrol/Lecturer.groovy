@@ -9,6 +9,10 @@ class Lecturer {
 	String office
 	String bio
 
+	String toString(){
+	return fullName
+	}
+
     static constraints = {
 	fullName nullable:false, blank:false
 	post nullable:false, blank:false
@@ -17,4 +21,11 @@ class Lecturer {
 	office nullable:false, blank:false
 	bio nullable:false, blank:false, maxSize:5000, widget:'textarea'
     }
+
+static hasMany = [modules:Module, courses:Course]
+
+static belongsTo = [courses:Course]
+
+//static hasMany = [courses:Course]
+
 }
