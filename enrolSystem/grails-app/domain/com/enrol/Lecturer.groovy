@@ -3,6 +3,8 @@ package com.enrol
 class Lecturer {
 
 	String fullName
+	String username
+	String password
 	String post
 	String subject
 	String lecturerEmail
