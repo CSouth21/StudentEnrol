@@ -32,6 +32,7 @@ class Course {
     }
 
 static hasMany = [students:Student, lecturers:Lecturer, modules:Module]
+
 //static hasMany = [lecturers:Lecturer]
 
 
